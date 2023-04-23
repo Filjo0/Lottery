@@ -1,18 +1,23 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Lottery extends JFrame {
-    private JButton b1, b2;
-    private JLabel l2;
-    private JTextField[] t = new JTextField[7];
-    private ArrayList<Byte> list1 = new ArrayList<>();
-    private ArrayList<Byte> list2 = new ArrayList<>();
-    private int[] lottery = new int[7];
+    private final JButton b1;
+    private final JButton b2;
+    private final JLabel l2;
+    private final JTextField[] t = new JTextField[7];
+    private final ArrayList<Byte> list1 = new ArrayList<>();
+    private final ArrayList<Byte> list2 = new ArrayList<>();
+    private final int[] lottery = new int[7];
 
     private Lottery(String s) {
         super(s);
